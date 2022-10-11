@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Movies.Data.Model.Genres>
+@{
+    ViewData["Title"] = "List of Genres";
+}
+
+<h2>List of Genres</h2>
+<a class="button" asp-area="" asp-controller="Report" asp-action="AddGenres">Add Genres</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Genres Name</th>
+           
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Genre in Model)
+        {
+            <tr>
+                <td>@Genre.GenreName</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

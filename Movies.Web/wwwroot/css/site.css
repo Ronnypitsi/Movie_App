@@ -1,0 +1,222 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+:root {
+    --blue-1: #3C429E;
+    --blue-2: #4C52AD;
+    --yellow-1: #FAC742;
+    --white: #FFF;
+    --grey-1: #EDEDED;
+    --shadow-dark: rgba(0,0,0,0.3);
+    --shadow-light: rgba(255,255,255,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.Divcontainer {
+    width: 300px;
+    height: 30vh;
+    background-color: var(--blue-2);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+    margin: 10px;
+}
+
+.upper-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+    .upper-data img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.lower-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 70%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoL {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.moviename {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.more-info-label {
+    color: var(--white);
+}
+
+.more-info-container {
+    flex: 1;
+    background-color: var(--shadow-dark);
+    margin: 0.3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-block-label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .info-block-label img {
+        width: 4.7em;
+    }
+
+    .info-block-label span {
+        color: var(--white);
+        font-size: 0.8em;
+    }
+
+.info-block-value {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white);
+}
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+.grid {
+    display: grid !important;
+}
+.bg-gray-50 {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgba(248, 250, 252, var(--tw-bg-opacity)) !important;
+}
+.border-t {
+    border-top-width: 1px !important;
+}
+.bg-gray-50 {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgba(248, 250, 252, var(--tw-bg-opacity)) !important;
+}
+.flex-col {
+    flex-direction: column !important;
+}
+.w-full {
+    width: 100% !important;
+}
+.flex {
+    display: flex !important;
+}
+.mt-auto {
+    margin-top: auto !important;
+}
+.icon-size-4 svg {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+}
+.items-center {
+    color: var(--white);
+}
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: var(--blue-2);
+}
+
+
+
+.form {
+    width: 50% !important;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+   

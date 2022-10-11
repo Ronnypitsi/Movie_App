@@ -1,0 +1,27 @@
+﻿@model Movies.Web.Models.charecterObject
+
+@{
+    ViewData["Title"] = "Add Character";
+}
+<h1>Add Character</h1>
+<form class="form" action="formAddCharacter" method="post">
+    <input type="text" class="form-control" placeholder="Character Name" name="CharacterName"><br/>
+    
+    <select class="form-control" name="MovieID">
+        <option>Select Movie</option>
+        @foreach (var Movie in Model.Movies)
+        {
+            <option value="@Movie.MovieID">@Movie.MovieName</option>
+
+        }
+    </select><br />
+    <select class="form-control" name="ActorID">
+        <option>Select Actor</option>
+        @foreach (var Actor in Model.Actors)
+        {
+            <option value="@Actor.ActorID">@Actor.ActorName</option>
+
+        }
+    </select><br /><br />
+    <input class="button" type="submit">
+</form>

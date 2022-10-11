@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Movies.Data.Model.Actors>
+@{
+    ViewData["Title"] = "List of Actors";
+}
+
+<h2>List of Actors</h2>
+<a class="button" asp-area="" asp-controller="Report" asp-action="AddActor">Add Actor</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+           
+            <th>Actor Name</th>
+            <th>Movie DOB</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Actor in Model)
+        {
+            <tr>
+
+                <td>@Actor.ActorName</td>
+                <td>@Actor.ActorDOB</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

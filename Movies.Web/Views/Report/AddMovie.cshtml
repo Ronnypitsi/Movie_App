@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Movies.Data.Model.Genres>
+@{
+    ViewData["Title"] = "Add Movie";
+}
+<h2>Add Movie</h2>
+<form class="form" class="form-control" action="formAddMovie" method="post">
+    <input type="text" class="form-control" placeholder="Name" name="MovieName"><br/>
+    <input type="text" class="form-control" name="ReleaseYear" placeholder="Release Year"><br />
+    <select class="form-control" name="Genre">
+        <option>Select Genre</option>
+        @foreach (var Genre in Model)
+        {
+            <option value="@Genre.GenreID">@Genre.GenreName</option>
+        
+        }
+    </select><br /><br />
+    <input class="button" type="submit">
+</form>

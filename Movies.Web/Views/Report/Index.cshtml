@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Movies.Web.Models.MovieData>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>List of Movies</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.MovieName)</th>
+            <th>@Html.DisplayNameFor(m => m.ReleaseYear)</th>
+            <th>@Html.DisplayNameFor(m => m.Genre)</th>
+           
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.MovieName</td>
+                <td>@emp.ReleaseYear</td>
+                <td>@emp.Genre.GenreName</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
